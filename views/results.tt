@@ -1,0 +1,52 @@
+: if $error {
+
+    <div id="error">
+        <h3>AIEEE!</h3>
+        <p>An error occurred:</p>
+        <p><: $error :></p>
+    </div>
+
+: } else {
+
+    <div id="results">
+
+        : if $matched >= 15 {
+        WELL DONE!
+        : } elsif $matched >= 10 {
+        NICE!
+        : } elsif $matched >= 5 {
+        ACH! only
+        : } elsif $matched >= 1 {
+        BOO! only
+        : } else {
+        BOO HOO!
+        : }
+
+        <: $matched :> out of <: $total_results :> of <a href="https://twitter.com/<: $q :>"><: $q :></a>'s tweets were 140 characters
+
+        <: if $matched == 15 { :>^_^<: } else { :>:(<: } :>
+
+        : if $total_results != 0 && $matched == $total_results {
+
+            <div id="you_win">
+                <h3>Congratulations!</h3>
+                <p>
+                    <span class="huge">100%</span> of their tweets were 140 characters <em>exactly</em>!
+                </p>
+            </div>
+
+        : }
+
+        : for $tweets -> $tweet {
+            <div class="tweet" style="border:1px dashed <: if strlen($tweet.text) == 140 { :>red<: } else { :>black<: } :>;">
+                <a href="https://twitter.com/<: $q :>/status/<: $tweet.id :>">
+                    <img src="<: $tweet.profile_image_url :>" />
+                    <div class="tweettext" ><: $tweet.text :></div>
+                    <div class="tweetcnt">[<: strlen($tweet.text) :> chars]</div>
+                </a>
+            </div>
+        : }
+
+    </div>
+
+: }
