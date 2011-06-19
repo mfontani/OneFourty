@@ -63,4 +63,4 @@
 
     </div>
 
-</div><div id="footer">Powered by <a href="http://www.perl.org/">Perl</a>, <a href="http://perldancer.org/">Dancer</a> <: $dancer_version :> and <a href="http://p3rl.org/Net::Twitter">Net::Twitter</a><br />Bitcoin donations: 1QA1K3Ghz9AuJ8na6JKJVudEko3WKx1xC2<br />Twitter data is cached for 5 minutes.</div></body></html>
+</div><div id="footer">Powered by <a href="http://www.perl.org/">Perl</a>, <a href="http://perldancer.org/">Dancer</a> <: $dancer_version :> and <a href="http://p3rl.org/Net::Twitter">Net::Twitter</a> - code on <a href="https://github.com/mfontani/OneFourty">github</a><br />Bitcoin donations: 1QA1K3Ghz9AuJ8na6JKJVudEko3WKx1xC2<br />Twitter data is cached for 5 minutes.</div></body></html>
