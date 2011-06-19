@@ -1,0 +1,14 @@
+OneFourty
+=========
+
+Overview
+--------
+
+How many of a person's recent tweets were *exactly* 140 characters?
+
+Meet the 140 characters challenge! http://140.casa.darkpan.com/
+
+Tech stuff
+----------
+
+Created using Perl and the Dancer framework; Net::Twitter and CHI cache.
